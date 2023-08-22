@@ -1,1 +1,3 @@
-print("Morjesta Ville!")
+# Alla tulostetaan merkkionoja
+print ("hello!")
+
