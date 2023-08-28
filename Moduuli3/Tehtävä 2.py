@@ -1,8 +1,8 @@
 hytti_luokka= str(input("Anna hyttiluokkasi"))
-if hytti_luokka:= str(LUX)
+if hytti_luokka== "LUX":
     print("Hyttisi on parvekkeellinen hytti yläkannella.")
-else :
-    if hytti_luokka:=str(A)
+
+elif hytti_luokka="A"
         print("Hyttisi on ikkunallinen hytti autokannen yläpuolella.")
-else:
+
     if hytti_luokka: =str(B)
