@@ -1,7 +1,7 @@
 import random
- # Kolmen luvun koodi
 print("Paina enter-näppäintä arpoaksesi avainkoodit")
 input()
+# Kolmen luvun koodi
 num1_1=random.randint(0,9)
 num2_1=random.randint(0,9)
 num3_1=random.randint(0,9)
