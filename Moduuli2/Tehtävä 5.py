@@ -13,4 +13,10 @@ kokonaismassa_KG = kokonaismassa/1000
 result = math.modf(kokonaismassa_KG)
 result_kg =result[1]
 result_g = result[0]
+
+'''Toinen tapa laskea kiloiksi ja grammoiksi
+kilot = int(kokonaismassa // 1000)
+gramma = kokonaismassa % 1000'''
+
+
 print(f"Massa nykymittojen mukaan: \n {result_kg:1.0f}  kilogrammaa ja {result_g:1.0f} grammaa.")
