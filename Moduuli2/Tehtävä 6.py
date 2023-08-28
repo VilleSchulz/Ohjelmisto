@@ -9,7 +9,7 @@ num3_1=random.randint(0,9)
 # 4 luvun koodi
 num1_2=random.randint(1,6)
 num2_2=random.randint(1,6)
-num3_2=random.randint(1,9)
+num3_2=random.randint(1,6)
 num4_2=random.randint(1,6)
 
 
