@@ -1,7 +1,7 @@
 #Kysyy lukua niin pitkään ennen kuin käyttäjä syöttää tyhjän merkkijonon
 
 
-while True :
+while True:
     luku=input('Anna luku:')
     if luku!="":
         continue
