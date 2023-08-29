@@ -1,6 +1,6 @@
-sentit= 0
-while sentit >= 0:
-    sentit = float(input("Anna pituus senttimetreinä, niin muutan sen tuumiksi: "))
-    tuumat = sentit / 2.54
-    if sentit>=0:
-        print(f"{tuumat} tuumaa")
+tuumat= 0
+while tuumat >= 0:
+    tuumat = float(input("Anna pituus tuumina, niin muutan sen senteiksi: "))
+    sentit = tuumat * 2.54
+    if tuumat>=0:
+        print(f"{sentit}cm")
