@@ -1,3 +1,4 @@
+# Tuumat senteiksi
 tuumat= 0
 while tuumat >= 0:
     tuumat = float(input("Anna pituus tuumina, niin muutan sen senteiksi: "))
