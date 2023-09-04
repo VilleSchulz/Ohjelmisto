@@ -13,7 +13,7 @@ menetelmällä. Lopuksi ohjelma tulostaa piin likiarvon käyttäjälle. (Huomaa,
 (x,y) on helppoa testata onko se yksikköympyrän A sisällä: riittää testata, toteuttaako
 piste epäyhtälön x^2+y^2<1.)'''
 
-
+'from random import uniform'
 import random
 hits = int(input("Anna satunnaisten pisteiden kokonaismäärä: "))
 points_N = 0
