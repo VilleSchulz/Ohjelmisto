@@ -9,10 +9,9 @@ while guess != numrndm:
     guess = int(input('Arvaa numero: '))
     if guess < numrndm:
         print("Arvaamasi numero on liian pieni!")
-    if guess > numrndm:
+    elif guess > numrndm:
         print("Arvaamasi numero on liian suuri!")
-else:
-    print('Arvasit oikein!')
+print('Arvasit oikein!')
 
 
 
