@@ -20,10 +20,10 @@ points_N = 0
 points_n = 0
 
 while points_N < hits:
-    x_cord=random.random()*2-1
-    y_cord=random.random()*2-1
+    x_cord=random.uniform(-1,1)
+    y_cord=random.uniform(-1,1)
     if (x_cord**2) + (y_cord**2)<=1:
-        points_n= points_n+1
-    points_N=points_N+1
+        points_n+=1
+    points_N+=1
 
 print(f'Piin likiarvo on osuttujen pisteiden mukaan: {points_n*4 /points_N}')
