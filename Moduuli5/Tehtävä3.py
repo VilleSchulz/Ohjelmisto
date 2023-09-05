@@ -13,4 +13,4 @@ print("Alkulukutesti suoritettu")
 if isPrime == True:
     print(f'luku {num} on alkuluku')
 else:
-    print('Ei ole alkuluku')
+    print(f'{num} ei ole alkuluku')
