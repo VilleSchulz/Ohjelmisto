@@ -4,7 +4,6 @@ Esimerkiksi luku 13 on alkuluku, koska se voidaan jakaa vain luvuilla 1 ja 13 si
 Toisaalta esimerkiksi luku 21 ei ole alkuluku, koska se voidaan jakaa tasan myös luvulla 3 tai luvulla 7.'''
 isPrime = True
 num = int(input("Anna luku: "))
-
 for i in range(2, num):
     if num % i ==0:
         isPrime = False
