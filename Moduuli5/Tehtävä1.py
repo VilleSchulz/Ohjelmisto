@@ -8,6 +8,5 @@ dicenum_result = []
 for _ in range(dicecount):
     dicenum = random.randint(1,6)
     dicenum_result.append(dicenum)
-
 print(f'Silmälukujen summa on: {sum(dicenum_result)}')
 
