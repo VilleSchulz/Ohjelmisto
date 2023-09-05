@@ -5,8 +5,9 @@ Käytä for-toistorakennetta.'''
 import random
 dicecount = int(input('Anna arpakuutioiden lukumäärä: '))
 dicenum_result = []
-for _ in range(dicecount):
+for i in range(dicecount):
     dicenum = random.randint(1,6)
+    print(i)
     dicenum_result.append(dicenum)
 print(f'Silmälukujen summa on: {sum(dicenum_result)}')
 
