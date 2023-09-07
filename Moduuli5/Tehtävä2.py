@@ -6,9 +6,11 @@
 import random
 dice_maxnum = int(input('Anna arpakuution maksimi silmäluku:  '))
 dicenum = 0
+roll = 0
 while True:
     dicenum = random.randint(1,dice_maxnum)
-    print(f'Luku: {dicenum}')
+    roll+=1
+    print(f'Heitto {roll}: {dicenum}')
     if dice_maxnum == dicenum:
         break
 print(f'Sait nopan maksimi silmäluvun: {dice_maxnum}')
