@@ -1,22 +1,12 @@
-'''Muokkaa edellistä funktiota siten, että funktio saa parametrinaan nopan
- tahkojen yhteismäärän. Muokatun funktion avulla voit heitellä esimerkiksi
- 21-tahkoista roolipelinoppaa. Edellisestä tehtävästä poiketen nopan heittelyä
- jatketaan pääohjelmassa kunnes saadaan nopan maksimisilmäluku, joka kysytään
- käyttäjältä ohjelman suorituksen alussa.'''
-import random
-dice_maxnum = int(input('Anna arpakuution maksimi silmäluku:  '))
-dicenum = 0
-roll = 0
-while True:
-    dicenum = random.randint(1,dice_maxnum)
-    roll+=1
-    print(f'Heitto {roll}: {dicenum}')
-    if dice_maxnum == dicenum:
+'''Kirjoita ohjelma, joka kysyy käyttäjältä lukuja siihen saakka, kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi.
+ Lopuksi ohjelma tulostaa saaduista luvuista viisi suurinta suuruusjärjestyksessä suurimmasta alkaen. Vihje: listan
+ alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille argumentiksi reverse=True. '''
+
+num = int(input("Anna luku: "))
+num_list= []
+for i in num_list:
+    num_list.append(num)
+    if str(num) == "":
         break
-print(f'Sait nopan maksimi silmäluvun: {dice_maxnum}')
-
-
-
-
-
-
+num_list.sort(reversed(max,4))
+print(f'Tässä viisi suurinta numeroa suuruus järjestyksessä: ')
