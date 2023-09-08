@@ -2,11 +2,19 @@
  Lopuksi ohjelma tulostaa saaduista luvuista viisi suurinta suuruusjärjestyksessä suurimmasta alkaen. Vihje: listan
  alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille argumentiksi reverse=True. '''
 
-num = int(input("Anna luku: "))
-num_list= []
-for i in num_list:
-    num_list.append(num)
-    if str(num) == "":
+num_list = []
+
+while True:
+    user_input = input("Anna luku: ")
+    if user_input == "":
         break
-num_list.sort(reversed(max,4))
-print(f'Tässä viisi suurinta numeroa suuruus järjestyksessä: ')
+    try:
+        num = float(user_input)
+        num_list.append(num)
+    except ValueError:
+        print("Virheellinen syöte. Syötä kelvollinen luku.")
+
+num_list.sort(reverse = True)
+
+result = num_list[:5]
+print(f'Tässä viisi suurinta numeroa suuruus järjestyksessä:{result}')
