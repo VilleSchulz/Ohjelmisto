@@ -1,8 +1,24 @@
 '''Kirjoita ohjelma, joka kysyy käyttäjältä lukuja siihen saakka, kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi.
  Lopuksi ohjelma tulostaa saaduista luvuista viisi suurinta suuruusjärjestyksessä suurimmasta alkaen. Vihje: listan
  alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille argumentiksi reverse=True. '''
-'
 
+
+num_list = []
+run = True
+while run:
+    user_input = input("Anna luku: ")
+    if user_input != "":
+        num_list.append(int(user_input))  # muutetaan string floatiksi ja lisätään listaanv
+    else:
+        run = False
+
+
+num_list.sort(reverse = True) # Järjestetään nousevaan järjestykseen luvut
+
+result = num_list[:5]
+print(f'Tässä viisi suurinta numeroa suuruus järjestyksessä:{result}')
+
+'''
 num_list = []
 
 while True:
@@ -17,7 +33,7 @@ num_list.sort(reverse = True) # Järjestetään nousevaan järjestykseen luvut
 
 result = num_list[:5]
 print(f'Tässä viisi suurinta numeroa suuruus järjestyksessä:{result}')
-
+'''
 '''
 # Toinen tapa
 num_list = []
