@@ -18,6 +18,9 @@ num_list.sort(reverse = True) # Järjestetään nousevaan järjestykseen luvut
 result = num_list[:5]
 print(f'Tässä viisi suurinta numeroa suuruus järjestyksessä:{result}')
 
+#vaihtoehto printtaukselle
+for i in range(5):
+    print(num_list[i])
 '''
 num_list = []
 
