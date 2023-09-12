@@ -14,4 +14,4 @@ while lista != "":
     lista = input("Anna lukuja:")
 else:
     lista == ""
-    print(laskuri(numero_list))
+    print(f'Summa on: {laskuri(numero_list)}')
