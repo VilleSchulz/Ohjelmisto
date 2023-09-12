@@ -17,19 +17,22 @@ print(f'Sait nopan maksimi silmäluvun: {dice_maxnum}')'''
 
 import random
 roll = 0
-def dice_roll():
+def dice_roll(i):
     dice_num = random.randint(1,dice_num_amount)
-    print(f'Numero: {dice_num}')
+    print(f'Heitto: {i} Numero {dice_num}')
     return dice_num
 flag = True
 dice_num_amount = int(input("Anna nopan tahkojen määrä: "))
 throw = 0
+i = 1
 while flag:
-    if dice_roll() == dice_num_amount:
+    if dice_roll(i) == dice_num_amount:
         flag =  False
 
     else:
-        dice_roll()
+
+        dice_roll(i)
+        i += 1
 
 
 
