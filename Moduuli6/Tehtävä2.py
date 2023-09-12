@@ -3,6 +3,7 @@
  21-tahkoista roolipelinoppaa. Edellisestä tehtävästä poiketen nopan heittelyä
  jatketaan pääohjelmassa kunnes saadaan nopan maksimisilmäluku, joka kysytään
  käyttäjältä ohjelman suorituksen alussa.'''
+'''
 import random
 dice_maxnum = int(input('Anna arpakuution maksimi silmäluku:  '))
 dicenum = 0
@@ -12,7 +13,25 @@ while dice_maxnum != dicenum:
     roll+=1
     print(f'Heitto {roll}: {dicenum}')
 
-print(f'Sait nopan maksimi silmäluvun: {dice_maxnum}')
+print(f'Sait nopan maksimi silmäluvun: {dice_maxnum}')'''
+
+import random
+roll = 0
+def dice_roll():
+    dice_num = random.randint(1,dice_num_amount)
+    print(f'Numero: {dice_num}')
+    return dice_num
+flag = True
+dice_num_amount = int(input("Anna nopan tahkojen määrä: "))
+throw = 0
+while flag:
+    if dice_roll() == dice_num_amount:
+        flag =  False
+
+    else:
+        dice_roll()
+
+
 
 
 
