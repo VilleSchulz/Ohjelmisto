@@ -6,14 +6,8 @@ Kirjoita testausta varten pääohjelma, jossa luot listan, kutsut funktiota ja t
 
 
 def laskuri(summarum):
-    num = 0
-    while (num < len(summarum)):
-        # Cecking condition
-        if summarum[num] % 2 == 0:
-           result = summarum[num]
-        # increment num
-        num += 1
-    return result
+    even_num = [x for x in summarum if x % 2 == 0]
+    return even_num
 
 numero_list = []
 lista = input("Anna lukuja:") # kysyy listaan lisättäviä numeroita
