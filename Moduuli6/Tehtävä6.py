@@ -25,3 +25,36 @@ print(f'{pizzalaskuri(pizza_size, pizza_price):.2f}€/m')
 
 
 
+'''python
+Copy code
+import math
+
+def laske_yksikkohinta(halkaisija, hinta):
+    pinta_ala = math.pi * (halkaisija / 2) ** 2  # Lasketaan pizzan pinta-ala neliömetreinä
+    yksikkohinta = hinta / pinta_ala
+    return yksikkohinta
+
+def main():
+    print("Syötä ensimmäisen pizzan tiedot:")
+    halkaisija1 = float(input("Halkaisija (senttimetreinä): "))
+    hinta1 = float(input("Hinta (euroina): "))
+
+    print("\nSyötä toisen pizzan tiedot:")
+    halkaisija2 = float(input("Halkaisija (senttimetreinä): "))
+    hinta2 = float(input("Hinta (euroina): "))
+
+    yksikkohinta1 = laske_yksikkohinta(halkaisija1, hinta1)
+    yksikkohinta2 = laske_yksikkohinta(halkaisija2, hinta2)
+
+    print("\nEnsimmäisen pizzan yksikköhinta: {:.2f} euroa/neliömetri".format(yksikkohinta1))
+    print("Toisen pizzan yksikköhinta: {:.2f} euroa/neliömetri".format(yksikkohinta2))
+
+    if yksikkohinta1 < yksikkohinta2:
+        print("\nEnsimmäinen pizza antaa paremman vastineen rahalle.")
+    elif yksikkohinta2 < yksikkohinta1:
+        print("\nToinen pizza antaa paremman vastineen rahalle.")
+    else:
+        print("\nMolemmat pizzat ovat samanhintaisia per neliömetri.")
+
+if __name__ == "__main__":
+    main().'''
