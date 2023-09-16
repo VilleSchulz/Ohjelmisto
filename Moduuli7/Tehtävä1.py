@@ -8,10 +8,10 @@ seasons = ("talvi", "kevät", "kesä", "syksy" )
 month_num = int(input("Anna kuukauden numero: "))
 
 if 1 <= month_num <= 12:
-    if month_num == 12 or month_num == 1 or month_num == 2:
+    if month_num == 12 or month_num == 1 or month_num == 2: # Jos kuukauden numero on 12 1 tai 2 niin kuukauden i on 0 jolloin se on automaattisesti talvi
         season = 0
     else:
-        season = month_num // 3
+        season = month_num // 3 # tässä jaetaan kuukaden järjestynumero 3 jolloin saadaan season listan indeksi arvo
 
     print(f'Kuukausi {months[month_num-1]} kuuluu vuodenaikaan {seasons[season]}')
 
