@@ -13,16 +13,18 @@ while run:
     if input_select == "syöttö":
         key1 = input("Anna lentoaseman nimi: ")
         value1 = input("Anna lentoaseman ICAO- koodi: ")
-        airport_list[key1] = value1
+        airport_list[key1] = value1# lisää tuplen listaan
     elif input_select == "haku":
         value2 = input("Anna lentoaseman ICAO- koodi: ").upper()
         if value2 in airport_list.values():
-            airport_name = [key for key, value in airport_list.items() if value == value2][0]
-            print(f"ICAO-koodin {value2} lentoasema: {airport_name}")
+            airport_name = [key for key, value in airport_list.items() if value == value2][0] #tarkistaa onko syötettyä valueta vastaava avain listassa
+            print(f"ICAO-koodin {value2} lentoasema: {airport_name}")# tulostaa lentoaseman nimen
+        else:
+            print(f'Hakemaasi ICAO- koodia: {value2} ei löydy listasta')# tarkistaa onko haluttua arvoa listassa
     elif input_select == "lopeta":
         run = False
 
 
 
-print(airport_list)
+print(airport_list) #lopuksi tulostaa listan sisällön
 
