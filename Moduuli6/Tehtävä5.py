@@ -5,8 +5,8 @@ Kirjoita testausta varten pääohjelma, jossa luot listan, kutsut funktiota ja t
 
 
 
-def laskuri(summarum):
-    even_num = [x for x in summarum if x % 2 == 0]
+def laskuri(calc):
+    even_num = [x for x in calc if x % 2 == 0]
     return even_num
 
 numero_list = []
