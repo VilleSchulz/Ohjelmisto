@@ -69,6 +69,8 @@ while user_input == "y":
         house_hand.clear()
         your_hand.clear()
     user_input = input("You want to start new round? (y/n)").lower()
+    if user_input == "y":
+        game_over = False
 
 
 
