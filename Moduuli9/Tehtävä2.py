@@ -6,7 +6,7 @@
  vielä päivittää.'''
 
 
-class Car():
+class Auto():
     def __init__(self,register,top_speed,speed = 0, km_amount = 0):
         self.register = register
         self.top_speed = top_speed
@@ -15,12 +15,12 @@ class Car():
 
 
 
-    def car_info(self):
+    def auto_info(self):
         print(f'Auton infot:\nRekisteritunnus:{self.register}\n'
               f'Huippunopeus: {self.top_speed}\n'
               f'Tämän hetkinen nopeus: {self.speed} km/h\n'
               f'Ajettu kilometrimäärä: {self.km_amount} km')
-    def acceleration(self,difference):
+    def kiihdytä(self, difference):
         if self.speed + difference > self.top_speed:
             self.speed = self.top_speed
         elif self.speed + difference < 0:
@@ -34,15 +34,15 @@ class Car():
 
 
 
-car1 = Car("123-ABC",142)
-car1.car_info()
-car1.acceleration(30)
-car1.car_info()
-car1.acceleration(70)
-car1.car_info()
-car1.acceleration(50)
-car1.car_info()
-car1.acceleration(-200)
-car1.car_info()
+car1 = Auto("123-ABC", 142)
+car1.auto_info()
+car1.kiihdytä(30)
+car1.auto_info()
+car1.kiihdytä(70)
+car1.auto_info()
+car1.kiihdytä(50)
+car1.auto_info()
+car1.kiihdytä(-200)
+car1.auto_info()
 print(f'{car1.speed} km/h')
 

@@ -5,14 +5,14 @@ auton (rekisteritunnus ABC-123, huippunopeus 142 km/h). Tulosta pääohjelmassa 
 luodun auton kaikki ominaisuudet.'''
 
 
-class Car():
+class Auto():
     def __init__(self,register,top_speed):
         self.register = register
         self.top_speed = top_speed
         self.speed = 0
         self.km_amount = 0
 
-    def car_info(self):
+    def auto_info(self):
         print(f'Auton infot:\nRekisteritunnus:{self.register}\n'
               f'Huippunopeus: {self.top_speed}\n'
               f'Tämän hetkinen nopeus: {self.speed}\n'
@@ -20,5 +20,5 @@ class Car():
 
 
 
-car1 = Car("123-ABC","142 km/h")
-car1.car_info()
+car1 = Auto("123-ABC", "142 km/h")
+car1.auto_info()
