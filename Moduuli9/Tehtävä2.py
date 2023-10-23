@@ -18,24 +18,31 @@ class Car():
     def car_info(self):
         print(f'Auton infot:\nRekisteritunnus:{self.register}\n'
               f'Huippunopeus: {self.top_speed}\n'
-              f'Tämän hetkinen nopeus: {self.speed}\n'
-              f'Ajettu kilometrimäärä: {self.km_amount}')
+              f'Tämän hetkinen nopeus: {self.speed} km/h\n'
+              f'Ajettu kilometrimäärä: {self.km_amount} km')
     def acceleration(self,difference):
-        self.speed += difference
-        if self.speed > self.top_speed:
-            self.speed == self.top_speed
-        elif self.speed < 0:
-            self.speed == 0
+        if self.speed + difference > self.top_speed:
+            self.speed = self.top_speed
+        elif self.speed + difference < 0:
+            self.speed = 0
+        else:
+            self.speed += difference
 
 
 
-car_list = []
 
-car1 = Car("123-ABC","142 km/h")
-car_list.append(car1)
+
+
+
+car1 = Car("123-ABC",142)
 car1.car_info()
 car1.acceleration(30)
+car1.car_info()
 car1.acceleration(70)
+car1.car_info()
 car1.acceleration(50)
-
+car1.car_info()
+car1.acceleration(-200)
+car1.car_info()
+print(f'{car1.speed} km/h')
 
