@@ -19,10 +19,7 @@ class Auto():
 
 
     def auto_info(self):
-        print(f'Auton infot:\nRekisteritunnus:{self.register}\n'
-              f'Huippunopeus: {self.top_speed}\n'
-              f'Tämän hetkinen nopeus: {self.speed} km/h\n'
-              f'Ajettu kilometrimäärä: {self.km_amount} km')
+        return self.register,self.top_speed, self.speed,self.km_amount
     def kiihdytä(self, difference):
         if self.speed + difference > self.top_speed:
             self.speed = self.top_speed
@@ -47,9 +44,10 @@ while not reached_10000:
             reached_10000 = True
             break
 
-
+print(f'{"Rekisteritunnus ":<16}{"Huippunopeus ":<16}{"Nopeus (km/h)":<16}{"Ajettu km":<16}')
 for car in auto_lista:
-    print(car.auto_info())
+    info = car.auto_info()
+    print(f'{info[0]:<16}{info[1]:<16}{info[2]:<16}{info[3]:<16}')
 
 
 
