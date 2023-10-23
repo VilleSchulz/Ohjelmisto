@@ -20,5 +20,5 @@ class Auto():
 
 
 
-car1 = Auto("123-ABC", "142 km/h")
+car1 = Auto("ABC-123", "142 km/h")
 car1.auto_info()

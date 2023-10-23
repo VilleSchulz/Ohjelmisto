@@ -34,7 +34,7 @@ class Auto():
 
 
 
-car1 = Auto("123-ABC", 142)
+car1 = Auto("ABC-123", 142)
 car1.auto_info()
 car1.kiihdytä(30)
 car1.auto_info()

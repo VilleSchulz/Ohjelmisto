@@ -29,7 +29,7 @@ class Auto():
     def auto_kulje(self,time):
         self.km_amount = self.km_amount + (time * self.speed)
 
-car1 = Auto("123-ABC", 142,60,2000)
+car1 = Auto("ABC-123", 142,60,2000)
 
 
 print(car1.auto_info())
