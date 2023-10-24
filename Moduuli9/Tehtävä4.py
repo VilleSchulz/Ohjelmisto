@@ -35,13 +35,12 @@ auto_lista = []
 for i in range(10):
     new_car = Auto(f"ABC-{i+1}", random.randint(100,200))
     auto_lista.append(new_car)
-reached_10000 = False
-while not reached_10000:
+
+while True:
     for car in auto_lista:
         car.kiihdytä(random.randint(-10,15))
         car.auto_kulje(1)
-        if car.km_amount >= 10000:
-            reached_10000 = True
+    if any(car.km_amount >= 10000 for car in auto_lista):
             break
 
 print(f'{"Rekisteritunnus ":<16}{"Huippunopeus ":<16}{"Nopeus (km/h)":<16}{"Ajettu km":<16}')
