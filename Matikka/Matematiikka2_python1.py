@@ -11,7 +11,7 @@ print(round(a_asteet, 1))
 print(round(b_asteet, 1))
 
 #Tehtävä1_2
-import numpy as np
+
 a= 137.7
 b=62.3
 
@@ -22,7 +22,7 @@ print(round(a_radiaani, 3))
 print(round(b_radiaani, 3))
 
 #Tehtävä1_3
-import numpy as np
+
 A = np.array([30, 45, 60,90,120,135,150,180,270,360])
 
 for i in A:
