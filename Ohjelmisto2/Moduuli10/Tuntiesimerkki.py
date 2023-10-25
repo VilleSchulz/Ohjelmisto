@@ -13,18 +13,8 @@ Kurssilla:
         nimi
         lista opiskelijoista'''
 
-class Course:
-    def __init__(self,name):
-        self.name = name
-        self.students = []
-    def check_coursename(self):
-        print(f'Kurssin nimi on {self.name}')
 
 
-    def check_students_on_course(self):
-        for student in self.students
-            #print(student)
-            print(student.name)
 class Student:
     count = 0
     def __init__(self,name,age=0): #age on oletusarvo on 0, jos arvoa ei ole syötetty
@@ -47,6 +37,44 @@ class Student:
             self.credits = self.credits + credits
 
 
+class Course:
+    def __init__(self,name):
+        self.name = name
+        self.students = []
+    def check_coursename(self):
+        print(f'Kurssin nimi on {self.name}')
+
+
+    def check_students_on_course(self):
+        for student in self.students:
+            #print(student)
+            print(student.name)
+
+    def add_student(self,student):
+        self.students.append(student)
+
+    def remove_student(self, student):
+        self.students.remove(student)
+    def add_credits_to_all(self,credits_unit):
+        for student in self.students:
+            student.add_credits(credits_unit)
+            student.say_hello()
+
+class School:
+    def __init__(self,name,location):
+        self.name = name
+        self.location = location
+        self.courses = []
+
+    def add_course(self,course_name):
+        self.courses.append(course_name)
+
+
+    def firealarm(self,name):
+        print(f"Apua koululla{self.name,  self.location} on palohälytys")
+        for course in self.courses:
+            print(f"Kurssi käynnissä: {course.name}")
+            course.check_students_on_course()
 
 print("Hei teretulemast kouluun!")
 #luodaan kolme opiskelijaa ja annetaan opiskelupisteet
@@ -76,7 +104,24 @@ course2.check_coursename()
 
 course1.students.append(st1)
 course1.students.append(st2)
+course1.check_coursename()
 course1.check_students_on_course()
-course2.students.append(st2)
-course2.students.append(st3)
 
+
+#parempi tapa on käyttää metodeja tähän toimintoon
+#Student-olio(tai oikeestaan viittaus siihen) annetaan metodikutsun parametrina
+course2.add_student(st2)
+course2.add_student(st3)
+course2.check_coursename()
+course2.check_students_on_course()
+
+
+course2.add_credits_to_all(5)
+
+school1 = School('Metropolia','Karamalmi')
+school2 = School('Laurea','Leppävaara')
+school1.add_course(course1)
+school2.add_course(course2)
+
+
+school1.firealarm()

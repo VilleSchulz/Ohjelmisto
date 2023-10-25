@@ -4,3 +4,11 @@ h esimerkiksi metodikutsun h.siirry_kerrokseen(5), metodi kutsuu joko kerros_yl�
 kertaa, että hissi päätyy viidenteen kerrokseen. Viimeksi mainitut metodit ajavat hissiä yhden kerroksen ylös- tai
 alaspäin ja ilmoittavat, missä kerroksessa hissi sen jälkeen on. Testaa luokkaa siten, että teet pääohjelmassa hissin
 ja käsket sen siirtymään haluamaasi kerrokseen ja sen jälkeen takaisin alimpaan kerrokseen.'''
+
+
+class Hissi
+    def __init__(self,alinkerros,ylinkerros):
+        self.alinkerros = alinkerros
+        self.ylinkerros = ylinkerros
+
+    def siirry
