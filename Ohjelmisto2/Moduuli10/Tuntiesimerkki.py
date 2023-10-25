@@ -70,7 +70,7 @@ class School:
         self.courses.append(course_name)
 
 
-    def firealarm(self,name):
+    def fire_alarm(self):
         print(f"Apua koululla{self.name,  self.location} on palohälytys")
         for course in self.courses:
             print(f"Kurssi käynnissä: {course.name}")
@@ -124,4 +124,4 @@ school1.add_course(course1)
 school2.add_course(course2)
 
 
-school1.firealarm()
+school1.fire_alarm()
