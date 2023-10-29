@@ -6,9 +6,24 @@ alaspäin ja ilmoittavat, missä kerroksessa hissi sen jälkeen on. Testaa luokk
 ja käsket sen siirtymään haluamaasi kerrokseen ja sen jälkeen takaisin alimpaan kerrokseen.'''
 
 
-class Hissi
+class Hissi:
     def __init__(self,alinkerros,ylinkerros):
         self.alinkerros = alinkerros
         self.ylinkerros = ylinkerros
 
-    def siirry
+    def siirry_kerrokseen(self,kerros):
+        self.kerros = kerros
+        while self.kerros != kerros:
+            if kerros < self.kerros:
+                self.kerros_ylös(kerros)
+
+    def kerros_ylös(self,kerros):
+        self.kerros =+ kerros
+        print(f"Olet kerroksessa{kerros}")
+    def kerros_alas(self,kerros):
+        self.kerros = kerros =- 1
+        print(f"Olet kerroksessa{kerros}")
+
+
+hissi1 = Hissi(1,50)
+hissi1.siirry_kerrokseen(3)
