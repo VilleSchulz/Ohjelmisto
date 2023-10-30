@@ -21,16 +21,37 @@ class Kilpailu:
     def __init__(self,nimi,kilometrimäärä,autolista):
         self.nimi = nimi
         self.kilometrimäärä = kilometrimäärä
-        self.auto_lista = autolista
+        self.autolista = autolista
 
     def tunti_kuluu(self):
-        self.auto.auto_kulje(1)
+            while not self.kilpailu_ohi():
+                laskuri = 0
+                for car in self.autolista:
+                    car.kiihdytä(random.randint(-10,15))
+                    car.auto_kulje(1)
+                    laskuri += 1
+                    if laskuri == 10:
+                        self.tulosta_tilanne()
+                    if self.kilpailu_ohi():
+                        print("kilpailu ohi!")
+                        self.tulosta_tilanne()
+                    elif self.kilpailu_ohi() :
+                        print("kilpailu jatkuu")
+
+
+
+
+
+    def kilpailu_ohi(self):
+        return any(car.km_amount >= self.kilometrimäärä for car in self.autolista)
+
 
     def tulosta_tilanne(self):
         print(f'{"Rekisteritunnus ":<16}{"Huippunopeus ":<16}{"Nopeus (km/h)":<16}{"Ajettu km":<16}')
         for car in self.autolista:
-            info = car.auto_info()
-            print(f'{info[0]:<16}{info[1]:<16}{info[2]:<16}{info[3]:<16}')
+            print(f'{car.register:<16}{car.top_speed:<16}{car.speed:<16}{car.km_amount:<16}')
+
+
 class Auto():
     def __init__(self,register,top_speed,speed = 0, km_amount = 0):
         self.register = register
@@ -41,6 +62,9 @@ class Auto():
 
 
     def auto_info(self):
+        print(f'{"Rekisteritunnus ":<16}{"Huippunopeus ":<16}{"Nopeus (km/h)":<16}{"Ajettu km":<16}')
+        for car in auto_lista:
+            print(f'{car.register:<16}{car.top_speed:<16}{car.speed:<16}{car.km_amount:<16}')
         return self.register,self.top_speed, self.speed,self.km_amount
     def kiihdytä(self, difference):
         if self.speed + difference > self.top_speed:
@@ -67,7 +91,7 @@ for i in range(10):
 
 
 
-kilpailu1 = Kilpailu("drag",100,auto_lista)
+kilpailu1 = Kilpailu("Suuri romuralli",8000,auto_lista)
 
 kilpailu1.tunti_kuluu()
 
