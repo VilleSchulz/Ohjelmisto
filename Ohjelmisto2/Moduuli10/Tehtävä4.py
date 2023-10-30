@@ -82,12 +82,7 @@ for i in range(10):
     new_car = Auto(f"ABC-{i+1}", random.randint(100,200))
     auto_lista.append(new_car)
 
-'''while True:
-    for car in auto_lista:
-        car.kiihdytä(random.randint(-10,15))
 
-    if any(car.km_amount >= 10000 for car in auto_lista):
-            break'''
 
 
 
