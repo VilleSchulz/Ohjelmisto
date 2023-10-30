@@ -21,14 +21,14 @@ class Kilpailu:
     def __init__(self,nimi,kilometrimäärä,autolista):
         self.nimi = nimi
         self.kilometrimäärä = kilometrimäärä
-        self.autolista = autolista
+        self.auto_lista = autolista
 
     def tunti_kuluu(self):
-        self.Auto.car.auto_kulje(1)
+        self.auto.auto_kulje(1)
 
     def tulosta_tilanne(self):
         print(f'{"Rekisteritunnus ":<16}{"Huippunopeus ":<16}{"Nopeus (km/h)":<16}{"Ajettu km":<16}')
-        for car in self.auto_lista:
+        for car in self.autolista:
             info = car.auto_info()
             print(f'{info[0]:<16}{info[1]:<16}{info[2]:<16}{info[3]:<16}')
 class Auto():
@@ -67,7 +67,7 @@ for i in range(10):
 
 
 
-kilpailu1 = Kilpailu(drag,100,auto_lista)
+kilpailu1 = Kilpailu("drag",100,auto_lista)
 
 kilpailu1.tunti_kuluu()
 
