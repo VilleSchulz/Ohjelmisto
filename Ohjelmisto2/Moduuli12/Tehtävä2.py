@@ -6,9 +6,10 @@ muunnettua Celsius-asteiksi.'''
 
 import requests
 end = False
-api_key = "1de88b337a970d6f071afa1641cba452"
+
 
 while not end:
+    api_key = input("Anna api-key")
     query = input("Anna paikkakunnan nimi jolta halua säätiedotteen!")
     request =f"https://api.openweathermap.org/data/2.5/weather?q={query}&appid={api_key}&units=metric"
     response_content = requests.get(request).json()
