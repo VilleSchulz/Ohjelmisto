@@ -19,8 +19,8 @@ def get_root(num):
             prime = True
         else:
             prime = False
-            response_data = {"Number": num, "isPrime": prime}
-            status_code = 200
+        response_data = {"Number": num, "isPrime": prime}
+        status_code = 200
     response_data = json.dumps(response_data)
     response = Response(response=response_data, status=status_code, mimetype= "application/json")
     return response
