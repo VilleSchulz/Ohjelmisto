@@ -4,4 +4,5 @@
 const kysely =prompt("Anna nimesi!");
 console.log(kysely);
 
-const nimi = ` Hello, `+kysely;
+const nimi = `Hello, ${kysely}!`;
+document.write("<p>" + nimi + "</p>");
