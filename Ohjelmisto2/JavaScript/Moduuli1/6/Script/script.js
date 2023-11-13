@@ -9,7 +9,7 @@ if (vastaus) {
     let squareRoot = Math.sqrt(number);
     result.innerHTML = `The square root of ${number} is ${squareRoot}`;
   } else {
-    result.innerHTML = ` The number you entered is negative number.`;
+    result.innerHTML = `The square root of a negative number is not defined`;
   }
 } else {
   result.innerHTML = 'The square root is not calculated';
