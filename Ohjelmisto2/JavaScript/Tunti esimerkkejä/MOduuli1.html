@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="moduuli1.js"></script>-->
+<style>
+    .blue{
+        color: blue:
+    }
+</style>
+</head>
+<body>
+<h1>hei käytetään consolea
+</h1>
+<div>moi olen divi</div>
+<p id="teksti" class="blue">Moi haluan muuttaa tätä</p>
+
+<script>
+  'use strict';
+   //nyt muutetaan html sisältöä tässä
+    const htmlNimi ='Ulla';
+    const element = document.querySelector('#teksti')
+  element.innerHTML = `Hei ${htmlNimi}`;
+    element.style.color ='red';
+
+</script>
+</body>
+</html>
