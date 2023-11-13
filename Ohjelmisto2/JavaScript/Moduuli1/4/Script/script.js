@@ -9,7 +9,7 @@
 // (if, else if, ..., else or switch).
 
 const name = prompt("Give your name! We will sort your class");
-const number = Math.floor(Math.random() * 4) + 1;
+const number = Math.floor(Math.random() * 4);
 //toinen tapa tehdä: function getRandomInt(min, max) {
 //min = Math.ceil(min);
 //max = Math.floor(max);
