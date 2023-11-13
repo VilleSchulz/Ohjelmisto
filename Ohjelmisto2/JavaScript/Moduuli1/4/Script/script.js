@@ -16,6 +16,21 @@ const number = Math.floor(Math.random() * 4);
 //return Math.floor(Math.random() * (max - min) + min);
 //The maximum is exclusive and the minimum is inclusive
 //}
+
+
+//Tai switch case
+
+//let class;
+//switch (classes){
+//  case 0;
+//  classes = 'Gryffindor'
+//    case 1;
+//  classes = 'Slytherin'
+//case 2;
+ // classes = 'Hufflepuff'
+ //   case 3;
+//  classes = 'Ravenclaw'
+//}
 const classes = ["Gryffindor","Slytherin", "Hufflepuff","Ravenclaw"]
 document.write("<p>"+ name +"Your class is" +classes[number]+ "</p>");
 
