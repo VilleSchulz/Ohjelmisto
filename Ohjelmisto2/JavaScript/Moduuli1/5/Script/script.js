@@ -10,8 +10,8 @@ const year = parseInt(prompt('Anna vuosi: '));
 let leap_year = null;
 
 if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)){
-  leap_year = `${year} on karkausvuosi`;
+  leap_year = `${year} is leap year`;
 } else {
-  leap_year = `${year} ei ole karkausvuosi`;
+  leap_year = `${year} is not leap year`;
 }
 document.querySelector('#target').innerHTML = leap_year;
