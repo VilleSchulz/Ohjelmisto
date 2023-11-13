@@ -9,7 +9,7 @@ const year = parseInt(prompt('Anna vuosi: '));
 
 let leap_year = null;
 
-if ((year % 4 === 0 && year % 100 != 0) || (year % 400 === 0)){
+if ((year % 4 === 0) && (year % 100 != 0) || (year % 400 === 0)){
   leap_year = `${year} on karkausvuosi`;
 } else {
   leap_year = `${year} ei ole karkausvuosi`;
