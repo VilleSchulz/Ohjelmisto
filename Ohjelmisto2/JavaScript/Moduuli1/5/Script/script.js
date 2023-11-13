@@ -11,7 +11,7 @@ let leap_year = null;
 
 if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
   leap_year = `${year} on karkausvuosi`;
-  document.querySelector('#target').innerHTML = leap_year;
 } else {
   leap_year = `${year} ei ole karkausvuosi`;
 }
+document.querySelector('#target').innerHTML = leap_year;
