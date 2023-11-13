@@ -7,7 +7,7 @@
 //Use math.random() to draw a value (1, 2, 3 or 4)
 //Once the number is drawn, you need to use a multiple choice structure
 // (if, else if, ..., else or switch).
-
+'use strict';
 const name = prompt("Give your name! We will sort your class");
 const number = Math.floor(Math.random() * 4);
 //toinen tapa tehdä: function getRandomInt(min, max) {
@@ -32,6 +32,7 @@ const number = Math.floor(Math.random() * 4);
 //  classes = 'Ravenclaw'
 //}
 const classes = ["Gryffindor","Slytherin", "Hufflepuff","Ravenclaw"]
-document.write("<p>"+ name +"Your class is" +classes[number]+ "</p>");
+print = name +" Your class is " + classes[number];
+document.querySelector('#target').innerHTML= print
 
 
