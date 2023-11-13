@@ -3,20 +3,25 @@
 //remember to convert strings to numbers when adding
 
 'use strict';
-const num1 = parseInt(prompt("Anna numero 1"))
+const num1 = parseInt(prompt("Anna numero 1"));
 
-console.log(num1)
+console.log(num1);
 
-const num2= parseInt(prompt("Anna numero 2"))
+const num2= parseInt(prompt("Anna numero 2"));
 
-console.log(num2)
+console.log(num2);
 
-const num3= parseInt(prompt("Anna numero 3"))
+const num3= parseInt(prompt("Anna numero 3"));
 
-console.log(num3)
-const sum = num1+num2+num3
-const product = num1*num2*num3
-const average = sum /3
-document.write("<p>Summa on "+ product + "</p>" )
-document.write("<p>Tulo on "+ sum + "</p>" )
-document.write("<p>Keskiarvo on "+ average + "</p>" )
+console.log(num3);
+
+const sum = num1+num2+num3;
+const product = num1*num2*num3;
+const average = sum /3;
+const sum_print = `Summa on ${sum}`;
+const product_print = `Tulo on ${product}`;
+const average_print = `Keskiarvo on ${average}`;
+
+document.querySelector('#target1').innerHTML = sum_print;
+document.querySelector('#target2').innerHTML = product_print;
+document.querySelector('#target3').innerHTML = average_print;
