@@ -16,9 +16,9 @@ if (start_year < end_year) {
       ulElement.append(newLi);
     }
   }
-} else if (end_year < start_year) {
-  for (let i = 0; end_year + i <= start_year; i++) {
-    const currentYear = end_year + i;
+} else if (start_year > end_year ) {
+  for (let i = 0; start_year - i >= end_year; i++) {
+    const currentYear = start_year -i;
     if ((currentYear % 4 === 0) && (currentYear % 100 !== 0) || (currentYear % 400 === 0)) {
       const newLi = document.createElement('li'); // Move this line here
       newLi.innerText = `${currentYear}`; // Use currentYear instead of end_year + i
