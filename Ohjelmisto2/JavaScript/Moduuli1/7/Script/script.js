@@ -6,10 +6,10 @@
 
 'use strict'
 
-var dice_rolls = parseInt(prompt("Give dice amount"));
-var sum = 0;
-for ( var i = 0; i < dice_rolls; i++){
-  var rollResult = Math.floor(Math.random() * 6 + 1);
+let dice_rolls = parseInt(prompt("Give dice amount"));
+let sum = 0;
+for ( let i = 0; i < dice_rolls; i++){
+  let rollResult = Math.floor(Math.random() * 6 + 1);
   console.log("Dice roll" + (i+1)+": " + rollResult);
   sum +=rollResult;
 
