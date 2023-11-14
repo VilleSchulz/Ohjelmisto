@@ -1,3 +1,5 @@
+'use strict';
+
 const start_year = parseInt(prompt('Give start year'));
 const end_year = parseInt(prompt('Give end year'));
 let yearList = '';
