@@ -17,7 +17,7 @@ while (true) {
 }
 num_list.sort((a, b) => a - b);
 
-for (let i = 0; count - 1 > i; i++) {
+for (let i = 0; count > i; i++) {
   console.log(num_list[i]);
 
 }
