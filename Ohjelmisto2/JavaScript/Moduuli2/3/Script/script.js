@@ -4,7 +4,7 @@
 
 const name_list = [];
 const targetElem = document.body;
-const olElement = document.createElement('ol');
+const olElement = document.createElement('ul');
 targetElem.append(olElement);
 
 for (i = 0; i < 6; i++) {
