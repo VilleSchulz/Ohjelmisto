@@ -9,7 +9,6 @@ while (true) {
   const num = parseInt(prompt('Give number!'));
   if (num_list.includes(num)) {
     console.log('Numbers has already been given');
-    num_list.pop();
     break;
   }
   num_list.push(num);
@@ -18,7 +17,7 @@ while (true) {
 }
 num_list.sort((a, b) => a - b);
 
-for (let i = 0; count-1 > i; i++) {
+for (let i = 0; count - 1 > i; i++) {
   console.log(num_list[i]);
 
 }
