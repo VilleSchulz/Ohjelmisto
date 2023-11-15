@@ -1,7 +1,7 @@
 //Write a program that asks for the names of six dogs. The program prints
 // dog names to unordered list <ul> in reverse alphabetical order. (2p)
 // Check assignment
-
+'use strict'
 const name_list = [];
 const targetElem = document.body;
 const olElement = document.createElement('ul');
