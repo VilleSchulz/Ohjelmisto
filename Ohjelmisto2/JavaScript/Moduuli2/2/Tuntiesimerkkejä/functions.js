@@ -27,8 +27,22 @@ function generateLotteryRow(numberCount, maxValue) {
     console.log('. pallon arvo: ' + number);
   }
 
-  return lotteryRow.sort((num1, num2) => num1-num2);
+  return lotteryRow.sort((num1, num2) => num1 - num2);
 }
 
-const myRow = generateLotteryRow(8,70);
-console.log(myRow);
+const myRow = generateLotteryRow(8, 70);
+console.log('myROw', myRow);
+
+//luodaan lottokuponki, jossa n määrä rivejä
+
+function createLotteryTicket(rowcount) {
+  const ticket = [];
+  for (let i = 0; i < rowcount; i++) {
+    const row = generateLotteryRow(7, 40);
+    ticket.push(row);
+
+  }
+  return ticket;
+}
+
+console.log(createLotteryTicket(5));
