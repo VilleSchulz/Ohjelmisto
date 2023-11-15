@@ -8,7 +8,7 @@ let count = 0;
 while (true) {
   const num = parseInt(prompt('Give number! Hit 0 to cancel'));
   num_list.push(num);
-  count + 1;
+  count += 1;
   if (num === 0) {
     break;
   }
