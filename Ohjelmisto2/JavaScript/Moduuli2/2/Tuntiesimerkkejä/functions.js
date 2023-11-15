@@ -24,7 +24,7 @@ function generateLotteryRow(numberCount, maxValue) {
     if (!lotteryRow.includes(number)) {
       lotteryRow.push(number);
     }
-    console.log('. pallon arvo: ' + number);
+    //console.log('. pallon arvo: ' + number);
   }
 
   return lotteryRow.sort((num1, num2) => num1 - num2);
@@ -45,4 +45,11 @@ function createLotteryTicket(rowcount) {
   return ticket;
 }
 
-console.log(createLotteryTicket(5));
+console.log();
+
+const myTicket = createLotteryTicket(5)
+console.log('koko lottolippulapu',myTicket)
+
+// tulostetaan toisen kunpongin 3 numero
+
+console.log(myticket[1][3])
