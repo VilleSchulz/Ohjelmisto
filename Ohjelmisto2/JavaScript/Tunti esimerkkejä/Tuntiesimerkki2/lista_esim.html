@@ -30,6 +30,16 @@
       console.log(items);
     }
   }
+  //poista ja palauta viimenen alkio
+  const vika = items.pop()
+  console.log('taulukosta poistettiin'+ vika)
+
+  // lisää ensimmäiseksi listassa
+  items.unshift('jari')
+
+  //onko taulukossa ko. arvo
+  console.log(items.includes('jari'))
+
 </script>
 </body>
 </html>

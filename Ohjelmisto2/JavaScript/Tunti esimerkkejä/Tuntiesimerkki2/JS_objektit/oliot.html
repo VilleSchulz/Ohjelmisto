@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //olioliteraali on kuin pythonin sanakirja
+    const person = { name: "iines", age: 30}
+
+    person['age'] =36;
+    person.name = 'Iines';
+    //pilkku console logissa hakee uudestaan console.login
+    console.log('persoona päivitetty',person)
+
+    const person2 = { name: "iines", age: 30}
+
+    person['age'] =36;
+    person.name = 'Iines';
+    //pilkku console logissa hakee uudestaan console.login
+    console.log('persoona päivitetty',person)
+
+    getInfo: function (){
+      return this.name + 'on' + this.age + '-vuotias';
+    }
+</script>
+</body>
+</html>
