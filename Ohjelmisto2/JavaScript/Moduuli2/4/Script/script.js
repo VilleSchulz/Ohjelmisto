@@ -14,12 +14,11 @@ while (true) {
   num_list.push(num);
   count += 1;
 
-
 }
 num_list.sort();
 num_list.reverse();
 
-for (let i = 0; count > i; i++) {
+for (let i = 0; count >= i; i++) {
   console.log(num_list[i]);
 
 }
