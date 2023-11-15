@@ -4,6 +4,18 @@
 // ordered list (<ol>) in alphabetical order. (2p)
 
 const part_amount = parseInt(prompt('Give number of participants'));
-for(i=part_amount;i<=0;i--) {
-  part_name = prompt(`Give name number ${i + 1}`)
+const name_list = [];
+const targetElem = document.body;
+const olElement = document.createElement('ol');
+targetElem.append(olElement);
+
+for (i = part_amount; i <= 0; i--) {
+  let part_name = prompt(`Give name number ${i + 1}`);
+  name_list.push(part_name);
+}
+name_list.sort();
+for (i = part_amount; i >= 0; i--) {
+  const newLI = document.createElement('li');
+  newLI.innerText = `${name_list[i]}`;
+  olElement.append(newLI)
 }
