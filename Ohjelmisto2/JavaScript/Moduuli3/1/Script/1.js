@@ -11,13 +11,13 @@ const newElement = document.createElement('div');
 newElement.className = 'my-list';
 targetElement.append(newElement);
 let newLI1 = document.createElement('li');
-newLI1.textContent = 'First item';
+newLI1.innerHTML = 'First item';
 newElement.append(newLI1);
 let newLI2 = document.createElement('li');
-newLI2.textContent = 'Second item';
+newLI2.innerHTML = 'Second item';
 newElement.append(newLI2);
 let newLI3 = document.createElement('li');
-newLI3.textContent = 'Third item';
+newLI3.innerHTML = 'Third item';
 newElement.append(newLI3);
 
 
