@@ -34,5 +34,8 @@ targetElement.textContent = 'tässä on js:n kautta luotu sisältö';
 const newP = document.createElement('p');
 newP.textContent = 'tässä jotai uutta';
 document.querySelector('article').append(newP);
-newP.style = 'color:blue';
+//newP.style = 'color:blue';
+newP.classList.add('blue');
+newP.classList.add('blue');
+
 
