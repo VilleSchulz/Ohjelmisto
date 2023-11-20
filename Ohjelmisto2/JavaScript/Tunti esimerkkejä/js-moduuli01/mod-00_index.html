@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .blue {
+            color: blue;
+        }
+    </style>
+    <!-- defer = html ladataan kokonaan ennen skriptin suoritusta -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<h1>Hei käytetään konsolia</h1>
+<div>Moi olen divi</div>
+
+<p id="teksti" class="blue">Moi haluan muuttaa tätä</p>
+
+<script>
+  'use strict';
+  // kommentti
+
+  // nyt muutetaan html sisältöä
+  const htmlNimi = "Ulla";
+  const element = document.querySelector('#teksti');
+  element.innerHTML = `Hei ${htmlNimi}`;
+  element.style.color = 'red';
+
+
+  console.log('Moro maailma suoraan bodyn sisältä');
+  // alert('Terve olen alert!!!!');
+  //const nimi = prompt('Moi mikä sinun nimesi on: ');
+  const nimi = 'Ulla';
+
+  console.log(nimi);
+
+  // string literal = merkkijono
+  const merkkijono = 'Nimesi siis on: ' + nimi;
+  console.log(merkkijono);
+
+  // template literal = muotoiltava lauseke
+  const muotoiltu = `Kiva tavata ${nimi}!`;
+  console.log(muotoiltu);
+
+  // var, älä käytä jos ei ole pakko
+  // älkää tehkö näin
+  // var muuttujan voi määritellä useaan kertaan
+  // hoisting eli käyttö ennen määrittelyä mahdollista
+  console.log(age);
+  var age = 12;
+  var age = 13;
+  console.log(age);
+
+  // tämän takia strict ja const/let
+
+  let teacher = 'Ulla';
+  let surname;
+  surname = 'Sederlöf';
+  teacher = teacher + ' ' + surname;
+  console.log(teacher);
+
+  const teacher2 = 'Matti';
+  const surname2 = 'Peltoniemi';
+  // aiheuttaa virheen, const on siis muuttumaton / constant
+  // teacher2 = teacher2 + surname2;
+  // console.log(teacher2);
+
+  /* multiplier = 4.1868;
+  const k1 = prompt('Give the amount of energy for lunch (kcal).');
+  const j1 = multiplier * k1;
+  console.log(`At breakfast you got ${j1} kJ`); */
+
+  const taulukko = [0,1,2,3,4,5];
+  console.log(taulukko);
+
+  // ei onnistu
+  // taulukko = [1,2,3,4,5,6];
+
+  // onnistuu
+  taulukko[0] = 1;
+  console.log(taulukko);
+
+  /** monen rivin kommentti alkaa (block comment)
+
+  // let muuttujan tyyppiä voi vaihtaa lennossa
+  // js on niin sanotusti loosely typed
+  let nameAgain = 'Ulla';
+  console.log(typeof nameAgain);
+  console.log(nameAgain);
+  nameAgain = 600;
+  console.log(typeof nameAgain, nameAgain);
+
+  // käytetään toString metodia
+  const ageStr = 13;
+  const age3 = ageStr.toString();
+  console.log(typeof age3, age3);
+
+   monen rivin kommentin lopetus
+   */
+</script>
+
+
+</body>
+</html>

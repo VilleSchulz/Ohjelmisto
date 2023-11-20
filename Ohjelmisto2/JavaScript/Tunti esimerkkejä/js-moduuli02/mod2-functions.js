@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<script>
 // JS funktiot
 // (3 eri tapaa määritellä, harkoissa keskitytään ensimmäiseen)
 
@@ -92,7 +84,3 @@ console.log('"kopioidut" taulukon arvot', numbers3);
 
 console.log('numbers4', numbers4);
 
-</script>
-
-</body>
-</html>
