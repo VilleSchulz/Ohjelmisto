@@ -6,3 +6,7 @@
 // Add class my-list to the element with id="target"
 
 'use strict'
+const targeElement = document.target;
+const newElement = document.createElement('div');
+newElement.className ='my-list';
+
