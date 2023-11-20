@@ -4,6 +4,7 @@ alustajat. Tee aliluokkiin metodi tulosta_tiedot, joka tudostaa kyseisen julkais
 julkaisut Aku Ankka (päätoimittaja Aki Hyyppä) ja Hytti n:o 6 (kirjailija Rosa Liksom, 200 sivua). Tulosta molempien
 julkaisujen kaikki tiedot toteuttamiesi metodien avulla.'''
 
+
 class Julkaisu:
     def __init__(self,name):
         self.name = name
@@ -29,3 +30,5 @@ kirja1 = Kirja("Hytti n:o 6","Rosa Liksom",200)
 
 kirja1.tulosta_tiedot()
 lehti1.tulosta_tiedot()
+
+
