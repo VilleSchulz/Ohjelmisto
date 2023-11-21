@@ -5,22 +5,14 @@
 // <li>Third item</li>
 // Add class my-list to the element with id="target"
 
+
 'use strict';
-const targetElement = document.getElementById('target');
-const newElement = document.createElement('div');
-newElement.className = 'my-list';
-targetElement.append(newElement);
-let newLI1 = document.createElement('li');
-newLI1.innerHTML = 'First item';
-newElement.append(newLI1);
-let newLI2 = document.createElement('li');
-newLI2.innerHTML = 'Second item';
-newElement.append(newLI2);
-let newLI3 = document.createElement('li');
-newLI3.innerHTML = 'Third item';
-newElement.append(newLI3);
 
+let items = '<li>First item</li><li>Second item</li><li>Third item</li>'
 
+document.getElementById('target').innerHTML = items;
+const element = document.getElementById('target');
+element.classList.add('my-list');
 
 
 
