@@ -1,11 +1,15 @@
 class Eläintarha:
-#eläintarha ja eläin luokkien välill on pysyvä assosiosaatiosuhde
-#yksisuutainen assosiaatio
-#eläintarha tietää mitä eläimiä siellä on mutta eläimet eivät tiedä olevansa tarhassa
+    # eläintarha ja eläin luokkien välill on pysyvä assosiosaatiosuhde
+    # yksisuutainen assosiaatio
+    # eläintarha tietää mitä eläimiä siellä on mutta eläimet eivät tiedä olevansa tarhassa
+
+    # luokan konstruktori eli alustaja
     def __init__(self, nimi):
         self.nimi = nimi
         self.eläimet = []
-    def lisää_eläin(self,eläin):
+
+    # luokan metodi
+    def lisää_eläin(self, eläin):
         self.eläimet.append(eläin)
 
     def listaa_eläimet(self):
@@ -13,16 +17,14 @@ class Eläintarha:
             Eläin.tee_ääni(i)
 
 
-
-
 class Eläin():
-    def __init__(self,rotu,ääni):
+    def __init__(self, rotu, ääni):
         self.rotu = rotu
         self.ääni = ääni
 
-
     def tee_ääni(self):
         print(f'{self.rotu} {self.ääni}')
+
 
 Eläintarha1 = Eläintarha('zoo')
 eläin1 = Eläin('Leijona', 'Karjuu')
