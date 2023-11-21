@@ -3,7 +3,7 @@ aiempaa tehtävää, jossa alkuluvun testaus tehtiin. Esimerkiksi lukua 31 vasta
 http://127.0.0.1:3000/alkuluku/31. Vastauksen on oltava muodossa: {"Number":31, "isPrime":true}.'''
 import json
 
-from flask import Flask, request,Response
+from flask import Flask,Response
 palavelin = Flask(__name__)
 @palavelin.route('/alkuluku/<num>')
 def get_root(num):
