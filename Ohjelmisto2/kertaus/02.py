@@ -1,7 +1,8 @@
 class Eläintarha:
-    eläimet = []
+
     def __init__(self, nimi):
         self.nimi = nimi
+        self.eläimet = []
     def lisää_eläin(self,eläin):
         self.eläimet.append(eläin)
 
