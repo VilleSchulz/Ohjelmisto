@@ -4,10 +4,10 @@ class Tili:
         self.nimi = nimi
         self.saldo = saldo
         self.tilien_määrä += 1
-        print(f'tilejä luotu {self.tilien_määrä}')
+        print(f'tilejä luotu: {self.tilien_määrä}')
 
     def maksa(self,maksu):
-        if self.saldo < maksu:
+        if self.saldo >= maksu:
             self.saldo = self.saldo - maksu
             print('Maksu onnistui')
         else:
@@ -17,7 +17,12 @@ class Tili:
         print(f'Omistaja {self.nimi}, tilillä rahaa{self.saldo}')
 
 
-print('---tilien luonti---')
+print('--- tilien luonti ---')
 t1 = Tili('Jorma')
 t2 = Tili('Anne',100)
-print('---maksut---')
+print('--- maksut ---')
+t1.maksa(25)
+t2.maksa(25)
+print('--- tilien saldot ---')
+t1.tulostus()
+t2.tulostus()
