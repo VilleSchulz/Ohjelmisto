@@ -3,8 +3,8 @@ class Tili:
     def __init__(self,nimi,saldo=0):
         self.nimi = nimi
         self.saldo = saldo
-        self.tilien_määrä += 1
-        print(f'tilejä luotu: {self.tilien_määrä}')
+        Tili.tilien_määrä += 1
+        print(f'tilejä luotu: {Tili.tilien_määrä}')
 
     def maksa(self,maksu):
         if self.saldo >= maksu:
@@ -14,7 +14,7 @@ class Tili:
             print('EI tarpeeksi rahaa')
 
     def tulostus(self):
-        print(f'Omistaja {self.nimi}, tilillä rahaa{self.saldo}')
+        print(f'Omistaja {self.nimi}, tilillä rahaa {self.saldo}')
 
 
 print('--- tilien luonti ---')
