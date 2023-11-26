@@ -114,9 +114,9 @@ for (let i = 0; i <= picArray.length; i++) {
   targetElement.appendChild(newArticle);
   const newH2 = document.createElement('h2');
   newH2.innerText = picArray[i].title;
-  targetElement.appendChild(newH2);
+  newArticle.appendChild(newH2);
   const newFig = document.createElement('figure');
-  targetElement.appendChild(newFig);
+  newArticle.appendChild(newFig);
   const newPic = document.createElement('img');
   newPic.src = picArray[i].image.medium;
   newPic.alt = picArray[i].title;
