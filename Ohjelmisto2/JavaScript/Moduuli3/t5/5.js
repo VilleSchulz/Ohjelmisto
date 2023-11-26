@@ -108,7 +108,7 @@ const picArray = [
 
 const targetElement = document.getElementById('pictures');
 
-for (let i = 0; i <= picArray.length; i++) {
+for (let i = 0; i < picArray.length; i++) {
   const newArticle = document.createElement('article');
   newArticle.classList.add('card');
   targetElement.appendChild(newArticle);
