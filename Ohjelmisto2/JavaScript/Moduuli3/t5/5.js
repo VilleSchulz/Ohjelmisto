@@ -118,7 +118,7 @@ for (let i = 0; i <= picArray.length; i++) {
   const newFig = document.createElement('figure');
   targetElement.appendChild(newFig);
   const newPic = document.createElement('img');
-  newPic.src = picArray[i].medium;
+  newPic.src = picArray[i].image.medium;
   newPic.alt = picArray[i].title;
   newFig.appendChild(newPic);
   const newCapt = document.createElement('figcaption');
