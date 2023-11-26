@@ -126,7 +126,7 @@ for (let i = 0; i < picArray.length; i++) {
   newCapt.innerText= picArray[i].caption;
   const newP = document.createElement('p');
   newP.innerText = picArray[i].description;
-  targetElement.appendChild(newP);
+  newArticle.appendChild(newP);
 
 
 }
