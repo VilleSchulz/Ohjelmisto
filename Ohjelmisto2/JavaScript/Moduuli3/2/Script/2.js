@@ -13,7 +13,7 @@ const newLI3 = document.createElement('li');
 targetElement.appendChild(newLI1);
 newLI1.innerText = 'First item';
 targetElement.appendChild(newLI2);
-newLI2.classList.add('my-list')
+newLI2.classList.add('my-list');
 newLI2.innerText = 'Second item';
 targetElement.appendChild(newLI3);
 newLI3.innerText = 'Third item';
