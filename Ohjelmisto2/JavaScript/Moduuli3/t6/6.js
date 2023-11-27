@@ -1,6 +1,6 @@
+'use strict'
+
 const targetElement = document.body;
-
-
 
 function clickhandler(event){
   console.log(event)
