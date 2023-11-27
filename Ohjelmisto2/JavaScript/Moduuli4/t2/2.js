@@ -3,7 +3,8 @@
 // with fetch to https://api.tvmaze.com/search/shows?q=${value_from_input}.
 // Print the search result to the console. (3p)
 'use strict';
-async function fetch_data(query) {
+async function fetch_data() {
+  let query = newQuery.value;
   try {
     const response = await fetch(
         `https://api.tvmaze.com/search/shows?q=${query}`);
@@ -15,23 +16,8 @@ async function fetch_data(query) {
 }
 const newQuery = document.querySelector('#query');
 const newForm = document.querySelector('#form');
-newForm.addEventListener('submit', fetch_data(newQuery.value));
-
-
-'use strict';
-button.addEventListener('click', async function (evt) {
-    evt.preventDefault();
-    const code = searchQuery.value;
-    try {
-        const response = await fetch(https://api.tvmaze.com/search/shows?q=${code})
-        console.log(response);
-    } catch (error) {
-        console.log(error.message);
-    }
-})
+newForm.addEventListener('submit',fetch_data);
 
 
 
-const searchQuery = document.querySelector('#query');
-const button = document.querySelector('input[type="submit"]');
 
