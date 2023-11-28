@@ -3,9 +3,7 @@
 // with fetch to https://api.tvmaze.com/search/shows?q=${value_from_input}.
 // Print the search result to the console. (3p)
 'use strict';
-const newQuery = document.querySelector('#query');
-const button = document.querySelector('input[type="submit"]');
-button.addEventListener('click', async function (evt) {
+async function funktio (evt) {
     evt.preventDefault();
     const code = newQuery.value;
     try {
@@ -14,4 +12,7 @@ button.addEventListener('click', async function (evt) {
     } catch (error) {
         console.log(error.message);
     }
-})
+}
+const newQuery = document.querySelector('#query');
+const button = document.querySelector('input[type="submit"]');
+button.addEventListener('click',funktio )
