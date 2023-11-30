@@ -54,7 +54,8 @@ try {
         const newImg = document.createElement('img');
         newArticle.appendChild(newImg);
         newImg.alt = showData.show.name;
-        newImg.src = showData.show.image?.medium;
+        newImg.src = showData.show.image.medium;
+
         const newSummary = document.createElement('div');
         newSummary.id = 'summary'
         newArticle.appendChild(newSummary);
