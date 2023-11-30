@@ -54,7 +54,7 @@ async function funktio(evt) {
             const newImg = document.createElement('img');
             newArticle.appendChild(newImg);
             newImg.alt = showData.show.name;
-            if (showData.show.image.medium == null) {
+            if (showData.show.image?.medium == null) {
                 newImg.src = 'https://via.placeholder.com/210x295?text=Not%20Found';
             } else {
 
