@@ -17,18 +17,60 @@
 // the <article> elements.
 // clear the old results with innerHTML = ''
 // before you append the new results.
+
+
 'use strict';
+
+
 async function funktio (evt) {
-    evt.preventDefault();
-    const code = newQuery.value;
-    try {
-        const response = await fetch(`https://api.tvmaze.com/search/shows?q=${code}`)
-        const json_data = response.json()
-        console.log(json_data);
-    } catch (error) {
-        console.log(error.message);
+evt.preventDefault();
+
+const code = newQuery.value;
+try {
+
+    const response = await fetch(`https://api.tvmaze.com/search/shows?q=${code}`);
+    const  jsonData = await response.json();
+    console.log( jsonData);
+    const targetElem = document.body;
+    const html_Result = document.createElement('div');
+    html_Result.id = 'results';
+    targetElem.appendChild(html_Result);
+    const resultsContainer = document.getElementById('results');
+
+        // Clear old results
+        resultsContainer.innerHTML = '';
+
+    for (let showData of  jsonData) {
+        const newArticle = document.createElement('article');
+        html_Result.appendChild(newArticle);
+        const newLink = document.createElement('a');
+        newLink.target = '_blank';
+        newLink.href = showData.show.url;
+        newLink.style.color = 'inherit';
+        newArticle.appendChild(newLink);
+        const newH2 = document.createElement('h2');
+        newLink.appendChild(newH2)
+        newH2.innerText = showData.show.name;
+        const newImg = document.createElement('img');
+        newArticle.appendChild(newImg);
+        newImg.alt = showData.show.name;
+        newImg.src = showData.show.image?.medium;
+        const newSummary = document.createElement('div');
+        newSummary.id = 'summary'
+        newArticle.appendChild(newSummary);
+        newSummary.innerHTML = showData.show.summary;
+
     }
+
+} catch (error) {
+    console.log(error.message);
 }
+
+}
+
+
 const newQuery = document.querySelector('#query');
 const button = document.querySelector('input[type="submit"]');
 button.addEventListener('click',funktio )
+
+
