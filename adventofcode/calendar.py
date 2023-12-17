@@ -1000,12 +1000,53 @@ nkthree86b5fgzzfoneqn
 eightgndhmrfouronexldvdvqnzxqjczfk1''')
 
 
-string_list= list.split(' ')
+#string_list= list.split(' ')
 
 int_list, str_list = [], []
-print(string_list)
+
+#print(list)
+#print(string_list)
+
+numbers = []
+sum_result = 0
+i = 0
+
+# Assuming 'my_list' is the list you're iterating through
+for char in list:
+    if char == '\n':
+        i += 1
+    elif char.isdigit():
+        # Make sure 'numbers' has enough elements
+        while len(numbers) <= i:
+            numbers.append([])
+
+        numbers[i].append(int(char))
+
+for sublist in numbers:
+    if len(sublist) < 2:
+        num1 = str(sublist[0])+str(sublist[0])
+        sum_result += int(num1)
+    else:
+        num1 = str(sublist[0]) + str(sublist[-1])
+        sum_result += int(num1)
+
+print("The numbers list is:", sum_result)
 
 
+
+
+'''for item in list:
+    try:
+        item = int(item)  # searching for integers in your string
+    except:
+        str_list.append(item)
+        string = ' '.join(str_list)
+    else:  # if there are integers i will add it to int_list but as str, because join function only can work with str
+        int_list.append(str(item))
+        integer = int(''.join(int_list))  # if you want it to be string just do z = ''.join(int_list)
+
+final = [integer]  # you can also add it to dictionary d = {string: integer}
+print(final)'''
 
 '''for item in list:
     try:
