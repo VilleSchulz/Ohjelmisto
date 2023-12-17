@@ -10,6 +10,11 @@
 
 
 'use strict';
+const name = prompt('Give your name')
+const number = Math.floor(Math.random()*4)
+const classes = ['Gryffindor','Slytherin','Hufflepuff','Ravenclaw']
+print = name + 'yor class is'+ class[number];
+document.querySelector('#target')
 const name = prompt("Give your name! We will sort your class");
 const number = Math.floor(Math.random() * 4);
 const classes = ["Gryffindor","Slytherin", "Hufflepuff","Ravenclaw"]

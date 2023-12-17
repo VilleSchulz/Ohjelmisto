@@ -3,7 +3,18 @@
 //remember to convert strings to numbers when adding
 
 'use strict';
-const num1 = parseInt(prompt("Anna numero 1"));
+const num1 =parseInt(prompt('Anna numero1'));
+const num2 = parseInt(prompt('Anna numero2'))
+const num3 = parseInt(prompt('Anna numero3'));
+
+
+const sum = num1+num2+num3;
+const product = num1*num2*num3;
+const average = sum/3;
+
+console.log('summa:',sum,'kerottuna:', product,'keskiarvo:',average);
+
+/*const num1 = parseInt(prompt("Anna numero 1"));
 
 console.log(num1);
 
@@ -24,4 +35,4 @@ const average_print = `Keskiarvo on ${average}`;
 
 document.querySelector('#target1').innerHTML = sum_print;
 document.querySelector('#target2').innerHTML = product_print;
-document.querySelector('#target3').innerHTML = average_print;
+document.querySelector('#target3').innerHTML = average_print;*/
