@@ -1037,28 +1037,34 @@ i = 0
 word_and_num = [[]]
 string = ''
 sum_result2 = 0
+
 #1.2
 import re
-def calculate_calibration_value(list):
-    word_to_digit  = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8,
-                   "nine": 9, "ten": 10}
-    words_and_digits = re.findall(r'[a-zA-Z]+|\d+',list)
-    converted_numbers = []
-    for word in words_and_digits:
-        if word in word_to_digit:
-            converted_numbers.append(word_to_digit[word])
-        elif word.isdigit():
-            converted_numbers.append(int(word))
+numbers2 = list.splitlines()
+print(numbers2)
 
-    for sublist in converted_numbers:
-        if len(sublist) < 2:
-            num1 = str(sublist[0])+ str(sublist[0])
-            sum_result2 =+ int(num1)
-        else:
-            num1 =str(sublist[0]) + str(sublist[-1])
-            sum_result2 += int(num1)
+def calculate_calibration_value(s):
+    # Extract the first and last characters of the string
+    first_char = s[0]
+    last_char = s[-1]
 
-    print(sum_result2)
+    # Convert characters to digits using a dictionary
+    digit_dict = {'zero': '0', 'one': '1', 'two': '2', 'three': '3', 'four': '4',
+                  'five': '5', 'six': '6', 'seven': '7', 'eight': '8', 'nine': '9'}
+
+    first_digit = digit_dict.get(first_char, first_char)
+    last_digit = digit_dict.get(last_char, last_char)
+
+    # Calculate and return the sum of first and last digits
+    return int(first_digit) + int(last_digit)
+
+
+# Additional example lines
+
+
+# Calculate calibration values and find the sum
+
+
     #calibration_value = sum(int(digit) for digit in converted_digits if digit.isdigit())
 
     #return calibration_value
