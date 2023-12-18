@@ -1008,10 +1008,12 @@ int_list, str_list = [], []
 #print(string_list)
 
 numbers = []
+
+
 sum_result = 0
 i = 0
 
-# Assuming 'my_list' is the list you're iterating through
+#1.1
 for char in list:
     if char == '\n':
         i += 1
@@ -1031,30 +1033,48 @@ for sublist in numbers:
         sum_result += int(num1)
 
 print("The numbers list is:", sum_result)
+i = 0
+word_and_num = [[]]
+string = ''
+sum_result2 = 0
+#1.2
+import re
+def calculate_calibration_value(list):
+    word_to_digit  = {"zero": 0, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8,
+                   "nine": 9, "ten": 10}
+
+    converted_numbers = []
+    i = 0
+    for line in list:
+        words_and_digits = re.findall(r'[a-zA-Z]+|\d+', line)
+        converted_numbers.append([])
+        converted_numbers.append(words_and_digits[i])
+
+    for word in words_and_digits:
+        if word in word_to_digit:
+            converted_numbers.append(word_to_digit[word])
+        elif word.isdigit():
+            converted_numbers.append(int(word))
+
+
+    print(converted_numbers)
+
+'''  for sublist in converted_numbers:
+        if len(sublist) < 2:
+            num1 = str(sublist[0])+ str(sublist[0])
+            sum_result2 =+ int(num1)
+        else:
+            num1 =str(sublist[0]) + str(sublist[-1])
+            sum_result2 += int(num1)
+
+    print(sum_result2)'''
+    #calibration_value = sum(int(digit) for digit in converted_digits if digit.isdigit())
+
+    #return calibration_value
+
+
+calculate_calibration_value(list)
 
 
 
-
-'''for item in list:
-    try:
-        item = int(item)  # searching for integers in your string
-    except:
-        str_list.append(item)
-        string = ' '.join(str_list)
-    else:  # if there are integers i will add it to int_list but as str, because join function only can work with str
-        int_list.append(str(item))
-        integer = int(''.join(int_list))  # if you want it to be string just do z = ''.join(int_list)
-
-final = [integer]  # you can also add it to dictionary d = {string: integer}
-print(final)'''
-
-'''for item in list:
-    try:
-        item = int(item)
-    except:
-        str_list.append(item)
-        string = ''.join(str_list)
-    else:
-        int_list.append(str(item))
-        '''
 
