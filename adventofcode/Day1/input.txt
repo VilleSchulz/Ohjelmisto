@@ -1,4 +1,4 @@
-list = ('''76xkqjzqtwonfour
+76xkqjzqtwonfour
 sixthree8sixjxjqsjgjgp
 38bgcczgtninefivefive
 sixthree4eight
@@ -997,81 +997,4 @@ jjpngnpzglkbltbrv2tjmqrpb
 4txvpps9kvjhgsqpcv6eight2jxk
 onesix8qfvkckg145ndkfdcvznine
 nkthree86b5fgzzfoneqn
-eightgndhmrfouronexldvdvqnzxqjczfk1''')
-
-
-#string_list= list.split(' ')
-
-int_list, str_list = [], []
-
-#print(list)
-#print(string_list)
-
-numbers = []
-
-
-sum_result = 0
-i = 0
-
-#1.1
-for char in list:
-    if char == '\n':
-        i += 1
-    elif char.isdigit():
-        # Make sure 'numbers' has enough elements
-        while len(numbers) <= i:
-            numbers.append([])
-
-        numbers[i].append(int(char))
-
-for sublist in numbers:
-    if len(sublist) < 2:
-        num1 = str(sublist[0])+str(sublist[0])
-        sum_result += int(num1)
-    else:
-        num1 = str(sublist[0]) + str(sublist[-1])
-        sum_result += int(num1)
-
-print("The numbers list is:", sum_result)
-i = 0
-word_and_num = [[]]
-string = ''
-sum_result2 = 0
-
-#1.2
-import re
-numbers2 = list.splitlines()
-print(numbers2)
-
-def calculate_calibration_value(s):
-    # Extract the first and last characters of the string
-    first_char = s[0]
-    last_char = s[-1]
-
-    # Convert characters to digits using a dictionary
-    digit_dict = {'zero': '0', 'one': '1', 'two': '2', 'three': '3', 'four': '4',
-                  'five': '5', 'six': '6', 'seven': '7', 'eight': '8', 'nine': '9'}
-
-    first_digit = digit_dict.get(first_char, first_char)
-    last_digit = digit_dict.get(last_char, last_char)
-
-    # Calculate and return the sum of first and last digits
-    return int(first_digit) + int(last_digit)
-
-
-# Additional example lines
-
-
-# Calculate calibration values and find the sum
-
-
-    #calibration_value = sum(int(digit) for digit in converted_digits if digit.isdigit())
-
-    #return calibration_value
-
-
-calculate_calibration_value(list)
-
-
-
-
+eightgndhmrfouronexldvdvqnzxqjczfk1
