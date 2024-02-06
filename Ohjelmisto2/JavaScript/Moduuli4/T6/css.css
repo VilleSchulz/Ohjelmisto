@@ -1,0 +1,13 @@
+*{
+    ;
+}
+body{
+    display: flex;
+    flex-direction: column;
+     width: 100%;
+}
+#destination{
+    display: flex;
+    padding-top: 0.5rem;
+
+}
