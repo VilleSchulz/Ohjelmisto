@@ -17,7 +17,7 @@ while True:
     except ValueError:
         print(f"{equation_amount} is not a number")
 
-input("Enter equation in this style :x+y+z-1\n"
+input("Enter equation in this style :2*x+y+z-1\n"
       "Press enter to continue.")
 for i in range(equation_amount):
     equation = input(f"Give equation {i + 1}!")
