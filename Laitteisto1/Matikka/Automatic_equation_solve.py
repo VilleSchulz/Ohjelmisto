@@ -7,6 +7,7 @@ equation_amount =1
 while True:
     try:
         equation_amount = int(input("Give me number of equations to solve \n"))
+        break
     except ValueError:
         print(f"{equation_amount} is not a number")
 
