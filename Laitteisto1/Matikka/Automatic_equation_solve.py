@@ -3,8 +3,13 @@ from sympy import symbols, solve
 
 array = []
 x, y, z = symbols('x, y, z')
+equation_amount =1
+while True:
+    try:
+        equation_amount = int(input("Give me number of equations to solve \n"))
+    except ValueError:
+        print(f"{equation_amount} is not a number")
 
-equation_amount = int(input("Give me number of equations to solve \n"))
 input("Enter equation in this style :x+y+z-1\n"
       "Press enter to continue.")
 for i in range(equation_amount):
