@@ -11,3 +11,4 @@ It drops the database named "kadonnut_testamentti" and creates a new one in its 
 ##Note
 The create_game_db.sql file must be in the same directory as the functions.py file for the database initialization function to work.
 Start the program by running main.py.
+ 
