@@ -1,12 +1,13 @@
-## Asennus
+##Info
+This was a group project for the Software 2 course. Inside the Front_End folder, you can find the frontend part of the game that I developed. Music is also made by me.
 
-ajakaa create_game_user.sql omaan tietokantaanne
-**HUOM: se droppaa käyttäjän nimeltä "game" ja luo uuden tilalle**
+##Installation
+Execute create_game_user.sql in your own database.
+NOTE: It drops the user named "game" and creates a new one in its place.
 
-Pythonkoodi alustaa tietokannan (*Ohjelmisto1-C/game_files/functions.py* -tiedoston funktio *format_database_for_new_game()*)
-**Droppaa tietokannan nimeltä "kadonnut_testamentti" ja luo uuden tilalle**
-sitä teiltä tuskin löytyy, mutta ajattelin huomauttaa
+##The Python code initializes the database (function format_database_for_new_game() in the file Ohjelmisto1-C/game_files/functions.py).
+It drops the database named "kadonnut_testamentti" and creates a new one in its place. You probably don't have it, but I wanted to point it out.
 
-### Muuta
-create_game_db.sql-tiedoston tulee olla samassa kansiossa kuin functions.py-tiedoston jotta tietokannan alustusfunktio toimii
-Ohjelma käynnistyy ajamalla main.py
+##Note
+The create_game_db.sql file must be in the same directory as the functions.py file for the database initialization function to work.
+Start the program by running main.py.
