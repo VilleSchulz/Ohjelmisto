@@ -45,11 +45,18 @@ class Hissi:
 
     def kerros_ylös(self):
         self.alinkerros += 1
-        print(f"Olet kerroksessa{self.alinkerros}")
+        print(f"You are in floor: {self.alinkerros}")
     def kerros_alas(self):
         self.alinkerros += -1
-        print(f"Olet kerroksessa{self.alinkerros}")
+        print(f"You are in floor: {self.alinkerros}")
+talo1 = Talo(1,0,0)
 
-talo1 = Talo(1,10, 2)
+
+talo1.ylinkerros = int(input("Give the highest floor the elevator goes to\n"))
+talo1.hissienlkm = int(input("Give the amount of elevators\n"))
+hissin_nro,kohdekerros = map(int,input("Give the elevator number and floor number where you want to go (Example: 1,1)\n").split(","))
+
+talo1.aja_hissiä(hissin_nro,kohdekerros)
+'''talo1 = Talo(1,10, 2)
 talo1.aja_hissiä(1,5)
-talo1.palohälytys()
+talo1.palohälytys()'''
