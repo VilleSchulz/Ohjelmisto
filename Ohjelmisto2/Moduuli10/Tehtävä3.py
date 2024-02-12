@@ -57,6 +57,7 @@ talo1.hissienlkm = int(input("Give the amount of elevators\n"))
 hissin_nro,kohdekerros = map(int,input("Give the elevator number and floor number where you want to go (Example: 1,1)\n").split(","))
 
 talo1.aja_hissiä(hissin_nro,kohdekerros)
+
 '''talo1 = Talo(1,10, 2)
 talo1.aja_hissiä(1,5)
 talo1.palohälytys()'''
