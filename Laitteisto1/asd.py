@@ -1,8 +1,6 @@
 import sounddevice as sd
 import numpy as np
 import pygame.mixer
-
-
 def play_sound():
     pygame.mixer.init()
     pygame.mixer.music.load('apina.wav')
@@ -21,4 +19,6 @@ def print_volume(indata, frames, time, status):
 while True:
     with sd.InputStream(callback=print_volume):
         sd.sleep(1000)
+
+
 
