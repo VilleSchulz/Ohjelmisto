@@ -1,16 +1,16 @@
+import re
 file = open("E:\\jupi.txt")
-grade = 0
+all_numbers = 0
 count = 0
 text = file.read()
 print(text)
 words = text.split()
-for line in text:
-    line.split(" ")
-    if line.isdigit():
-        print(line)
-        #grade += int(line)
-        #count += 1
-print(words)
-print(f"Average grade is : {grade / count}")
-
 for i in words:
+    number = re.sub(r'[^\d]', '', i)
+    if number:
+        all_numbers += int(number)
+        count += 1
+
+average = all_numbers/count
+print(f"\n\nJupi teki viikossa töitä {all_numbers}h ja keskimäärin päivässä {average}h ")
+
