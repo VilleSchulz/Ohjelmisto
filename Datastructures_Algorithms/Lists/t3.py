@@ -149,39 +149,3 @@ class SinglyLinkedList():
         return value
 
 
-    def remove_by_value(self, value):
-        """
-        Remove first node with given value and return its position
-        """
-        # Find if there is a node with given value
-        current_node = self._head
-        index = 0
-        while current_node and current_node.data != value:
-            current_node = current_node.next
-            index += 1
-
-        # If value was not found, current_node is None
-        if not current_node:
-            return None
-
-        previous_node = current_node.prev
-        next_node = current_node.next
-
-        # If node to remove is the first node, update head
-        if previous_node is None:
-            self._head = next_node
-        else:
-            # If not, update previous node
-            previous_node.next = next_node
-
-        # If node to remove is last node, update tail
-        if next_node is None:
-            self._tail = previous_node
-        else:
-            # If not, update next node
-            next_node.prev = previous_node
-
-        # Update size, remove the node and return its index
-        self._size -= 1
-        del (current_node)
-        return index
