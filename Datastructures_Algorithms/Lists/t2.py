@@ -52,19 +52,16 @@ class SinglyLinkedList():
             return None
 
         if self._size == 1:
-            previous_node = None
+            node_to_remove = self._head
+            self._head = self._tail = None
         else:
             previous_node = self._head
-
-        for _ in range(self._size-2):
-            previous_node = previous_node.next
-
-        node_to_remove = self._tail
-        if previous_node is None:
-            self._head = None
-        else:
+            for _ in range(self._size - 2):
+                previous_node = previous_node.next
+            node_to_remove = self._tail
             previous_node.next = None
-        self._tail = previous_node
+            self._tail = previous_node
+
         value = node_to_remove.data
         del node_to_remove
         self._size -= 1

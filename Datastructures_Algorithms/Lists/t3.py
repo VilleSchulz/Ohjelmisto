@@ -124,11 +124,11 @@ class SinglyLinkedList():
         self._size += 1
 
     def remove(self, index):
-        if index < 0 or index > self._size:
+        if index < 0 or index >= self._size:
             raise (ValueError('Index out of bounds'))
         # default values
         previous_node = None
-        next_node = self._head
+        current_node = self._head
         # if removed node  is index 0 delete head
         if index == 0:
             removed_node = self._head
@@ -136,16 +136,15 @@ class SinglyLinkedList():
 
         else:
             for _ in range(index):
-                previous_node = next_node
-                next_node = next_node.next
-            removed_node = next_node
-            previous_node.next = next_node.next
+                previous_node = current_node
+                current_node = current_node.next
+            removed_node = current_node
+            previous_node.next = current_node.next
+
+        if removed_node == self._tail:
+            self._tail = previous_node
+
         value = removed_node.data
-
         del removed_node
-
         self._size -= 1
-
         return value
-
-

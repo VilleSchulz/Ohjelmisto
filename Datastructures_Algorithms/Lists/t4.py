@@ -168,7 +168,7 @@ class DoublyLinkedList:
 
         # YOUR CODE HERE! Remove also next line if necessary
 
-        if index < 0 or index > self._size:
+        if index < 0 or index >= self._size:
             raise ValueError("Out of index")
 
         previous_node = None
@@ -187,10 +187,8 @@ class DoublyLinkedList:
             #if not update previous node
             previous_node.next = new_node
 
-
-        if previous_node == self._tail:
+        if next_node is None:
             self._tail = new_node
-
         else:
             next_node.prev = new_node
         self._size +=1
