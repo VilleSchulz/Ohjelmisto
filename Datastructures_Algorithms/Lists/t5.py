@@ -251,23 +251,22 @@ class DoublyLinkedList:
             raise (ValueError('Index out of bounds'))
 
         current_node = self._head
-        previous_node = None
         for _ in range(index):
-            previous_node = current_node
             current_node = current_node.next
+
+        previous_node = current_node.prev
         next_node = current_node.next
 
         if previous_node is None:
-            self._head = current_node.next
+            self._head = next_node
 
         else:
             previous_node.next = next_node
 
-
         if next_node is None:
             self._tail = previous_node
-
-
+        else:
+            next_node.prev = previous_node
         value = current_node.data
 
         del current_node
