@@ -247,22 +247,22 @@ class DoublyLinkedList:
 
         # YOUR CODE HERE. Remove the next line also if necessary
 
-        if index < 0 or index > self._size:
+        if index < 0 or index >= self._size:
             raise (ValueError('Index out of bounds'))
 
         current_node = self._head
-
+        previous_node = None
         for _ in range(index):
+            previous_node = current_node
             current_node = current_node.next
-
-        previous_node = current_node.prev
         next_node = current_node.next
 
         if previous_node is None:
-            self._head = next_node
+            self._head = current_node.next
 
         else:
             previous_node.next = next_node
+
 
         if next_node is None:
             self._tail = previous_node
@@ -276,12 +276,7 @@ class DoublyLinkedList:
 
 
 mylist = DoublyLinkedList()
-
-try:
-    val = mylist.remove(0)
-except ValueError:
-    print(mylist)
-except Exception as e:
-    print(f'Exception: {e}')
-else:
-    print('No exception raised!')
+for i in range(10, 51, 10):
+    mylist.append(i)
+val = mylist.remove(4)
+print(val, mylist)
