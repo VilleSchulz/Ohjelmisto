@@ -57,12 +57,27 @@ class Queue:
             current = current.next
 
         plural = "" if self._size == 1 else "s"
-        return f"<Queue ({self._size} element{plural}): [{' ,'.join(values)}]>"
+        return f"<Queue ({self._size} element{plural}): [{', '.join(values)}]>"
 
 
-queue = Queue()
-queue.enqueue('A')
-queue.enqueue('B')
-queue.enqueue('C')
-val = queue.dequeue()
-print(val, queue)
+def get_pairs(numberList):
+    even= None
+    odd =None
+    evenQueue = Queue()
+    oddQueue = Queue()
+    pairs = []
+
+    for num in numberList:
+        if num % 2 == 0:
+            evenQueue.enqueue(num)
+        else:
+            oddQueue.enqueue(num)
+    while not evenQueue.is_empty() and not oddQueue.is_empty():
+        even = evenQueue.dequeue()
+        odd = oddQueue.dequeue()
+        pairs.append((even, odd))
+
+    return pairs
+
+
+print(get_pairs([79, 38, 36, 40, 26, 14, 30, 71, 97, 91, 86, 27, 71, 28, 70, 60, 70, 96, 67, 16]))
