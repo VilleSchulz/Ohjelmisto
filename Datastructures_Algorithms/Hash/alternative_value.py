@@ -21,6 +21,10 @@ class HashTable():
         plural = '' if self.used_slots == 1 else 's'
         return f'<HashTable ({self.used_slots} element{plural}): [{text.lstrip(", ")}]'
 
+    '''def _hash(self, key):
+        """ Hashing function. Can be changed for a custom one. """
+        return sum((index + 1) * ord(char) for index, char in enumerate(key)) % self.size
+'''
     def _hash(self, key):
         """
         Hashing function. Can be changed for a custom one.
