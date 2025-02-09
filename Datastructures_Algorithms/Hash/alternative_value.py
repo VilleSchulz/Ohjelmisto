@@ -121,3 +121,59 @@ class HashTable():
 
         else:
             return self.slots[q].value
+
+    def remove(self, key):
+        """
+        Remove a key from the table
+
+        Parameters:
+        - 'key': key to remove
+
+        Returns: None
+        """
+        # Find the position of the given key
+        freed_pos = self._find_key(self._hash(key), key)
+
+        # If not found, return
+        if freed_pos is None:
+            return None
+
+        # Define a helper lambda that gives the separation
+        # in positions of a given position and the original
+        # position a key should go.
+        separation = lambda pos, elem: (pos - self._hash(elem.key)) % self.size
+
+        # Decrement the number of used slots
+        self.used_slots -= 1
+
+        # Loop
+        while True:
+            # Empty the position
+            self.slots[freed_pos] = None
+
+            # Prepare a helper pointer
+            candidate_pos = freed_pos
+
+            while True:
+                # Move the helper pointer 1 position
+                candidate_pos = (candidate_pos + 1) % self.size
+
+                # Save that position's content
+                current_elem = self.slots[candidate_pos]
+
+                # If position is empty, function can return
+                if current_elem is None:
+                    return
+
+                # If the separation between current element's original position
+                # and the position that was emptied is less than the separation
+                # between the element's original position and the helper position,
+                # then exit the loop (to move the element to the emptied position)
+                if separation(freed_pos, current_elem) < separation(candidate_pos, current_elem):
+                    break
+
+            # Move the element to the emptied position
+            self.slots[freed_pos] = current_elem
+
+            # New empty position is the helper position
+            freed_pos = candidate_pos
